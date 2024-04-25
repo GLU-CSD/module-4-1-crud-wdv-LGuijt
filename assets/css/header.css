@@ -1,0 +1,25 @@
+#navbalk {
+  background-color: #4f5052;
+  position: sticky;
+  top: 0.1px;
+  display: grid;
+  color: white;
+  opacity: 0.8;
+  grid-template-columns: 60px auto auto;
+  grid-template-rows: 60px auto auto;
+}
+
+#logo {
+  grid-column: 1;
+  grid-row: 1;
+  height: 60px;
+  width: 60px;
+}
+
+#homelinks,
+#navlinks {
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=header.css.map */

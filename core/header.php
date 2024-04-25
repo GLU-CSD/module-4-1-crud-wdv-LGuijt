@@ -1,37 +1,50 @@
 <?php
-    include('core/db_connect.php');
+include ('core/db_connect.php');
+
+$paginatitel = 'Home';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><?= $paginatitel ?> - FruitFish</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Webshop met een leuke naam</title>
+    <link rel="stylesheet" href="../assets/css/header.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="row">
-            <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading1">First</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#scrollspyHeading2">Second</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-                            <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-   
+    <div id="pagina">
+        <div id="navbalk">
+            <div id="logo" onclick="document.location='./homepage.php'"><img id="logoimg" src="" alt="logo"></div>
+            <div id="navlinks">
+                <a class="links" href="" target="_self">Schilderijen</a>
+                <a class="links" href="" target="_self">Tekeningen</a>
+                <a class="links" href="" target="_self">Kaarten</a>
+                <a class="links" href="" target="_self">Dozen</a>
+                <a class="links" href="" target="_self">Accessoires</a>
+                <input type="text" id="search" name="search" placeholder="Search..">
+            </div>
+            <div id="homelinks">
+                <a class="links" href="" target="_blank">Inloggen &nbsp;<img src="" alt="i"></a>
+                <a class="links" href="" target="_blank">Favorieten &nbsp;<img src="" alt="h"></a>
+                <a class="links" href="" target="_blank">Winkelwagen()<img src="" alt="w"></a>
+                <button class="icon" onclick="alert('clicked')"><img src="" alt="h"></button>
+            </div>
+            <div id="burgernav">
+        <a class="burgerlinks" href="" target="_self">Schilderijen</a>
+        <a class="burgerlinks" href="" target="_self">Tekeningen</a>
+        <a class="burgerlinks" href="" target="_self">Kaarten</a>
+        <a class="burgerlinks" href="" target="_self">Dozen</a>
+        <a class="burgerlinks" href="" target="_self">Accessoires</a>
+        <a class="burgerlinks" href="" target="_blank">Inloggen &nbsp;<img
+            src="" alt="i"></a>
+        <a class="burgerlinks" href="" target="_blank">Favorieten &nbsp;<img
+            src="" alt="h"></a>
+        <a class="burgerlinks" href="" target="_blank">Winkelwagen&nbsp;<img
+            src="" alt="w"></a>
+      </div>
+    </div>

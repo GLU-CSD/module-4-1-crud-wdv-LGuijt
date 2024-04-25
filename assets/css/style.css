@@ -1,3 +1,25 @@
 body {
-  background-color: lightblue;
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  margin: 0px;
+}
+
+#pagina {
+  display: grid;
+  grid-template-rows: 60px auto 200px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  margin: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #36a0ba;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
