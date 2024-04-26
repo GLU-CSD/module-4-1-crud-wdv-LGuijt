@@ -7,7 +7,7 @@ body {
 
 #pagina {
   display: grid;
-  grid-template-rows: 60px auto 200px;
+  grid-template-rows: 60px auto 180px;
 }
 
 ::-webkit-scrollbar {

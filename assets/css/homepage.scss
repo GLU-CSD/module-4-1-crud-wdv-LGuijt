@@ -1,0 +1,117 @@
+@import "var";
+
+.alert{
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid red;
+    color: red;
+    font-size: 30px;
+    .closebtn{
+        float: right;
+    }
+}
+
+h1 {
+    font-size: 150px;
+    font-style: italic;
+    transition-duration: 10s;
+    text-align: center;
+    margin: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1:hover{
+    background-image: url(../img/iconen/background.jpg);
+    background-clip: text;
+    color: transparent;
+    cursor: default;
+}
+
+#plaatjes{
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#frenfi, #fienfr{
+    width: 30%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition-duration: 2s;
+    margin-right: 5%;
+}
+
+#frenfi:hover{
+    width: 50%;
+    margin-right: 0%;
+}
+
+#fienfr:hover{
+    width:60%;
+    margin-left: -5%;
+}
+
+#txt {
+    font-size: x-large;
+    font-style: italic;
+    height: 10%;
+    width: 100%;
+}
+
+#homeimagefr, #homeimagefi {
+    height: 90%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px;
+}
+
+#homeimagefr{
+    background-image: url(../img/prod_img/schilderij_voorbeeld.png);
+}
+
+#homeimagefi {
+    background-image: url(../img/prod_img/tekening_voorbeeld.png);
+}
+
+#nieuws{
+    background-color: #36a0ba;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 5%;
+    color: white;
+    max-width: 90vw;
+    box-shadow: 1px 1px 5px black;
+    p{
+        text-transform: uppercase;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #imagescroll{
+        overflow: auto;
+        white-space: nowrap;
+        img {
+            max-height: 300px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            box-shadow: 1px 1px 5px black;
+        }
+    }
+    #imagescroll::-webkit-scrollbar-thumb {
+        background: $donkerblauw;
+    }
+    #imagescroll::-webkit-scrollbar-thumb:hover {
+        background: #085d72;
+        border-radius: 0%;
+    }
+    #imagescroll::-webkit-scrollbar-track{
+        box-shadow: 0.5px 0.5px 5px black;
+    }
+}
+
