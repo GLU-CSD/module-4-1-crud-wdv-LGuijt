@@ -28,8 +28,9 @@ if ($con->connect_errno) {
 define("BASEURL", "http://localhost/webdev-base/");
 define("BASEURL_CMS", "http://localhost/webdev-base/admin/");
 
-// function prettyDump ( $var ) {
-//     echo "<pre>";
-//     var_dump($var);
-//     echo "</pre>";
-// } 
+function prettyDump($var)
+{
+    echo "<pre>";
+    var_dump($var);
+    echo "</pre>";
+}

@@ -23,8 +23,9 @@ include 'core/header.php';
         <p> Onze nieuwste producten</p>
         <div id=imagescroll>
             <?php
-
-            $sqli_prepare = $con->prepare("SELECT img_src FROM product_imgs WHERE main_img = 1 LIMIT 7;");
+            $imgamount = 7;
+            $sqli_prepare = $con->prepare("SELECT img_src FROM product_imgs WHERE main_img = 1 LIMIT ?;");
+            $sqli_prepare->bind_param('i', $imgamount);
             if ($sqli_prepare === false) {
                 echo mysqli_error($con);
             } else {

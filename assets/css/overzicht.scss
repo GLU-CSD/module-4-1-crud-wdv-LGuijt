@@ -10,27 +10,22 @@
   border-left: 2px solid #076178;
   border-right: 2px solid #076178;
   grid-column: 1 / span 5;
-}
-
-.mainpagelinks p {
-  margin-top: 0.5%;
-  margin-left: 1%;
-}
-
-.mainpagelinks a:link {
-  color: black;
-}
-
-.mainpagelinks a:visited {
-  color: black;
-}
-
-.mainpagelinks a:hover {
-  color: #36a0ba;
-}
-
-.mainpagelinks a:active {
-  color: #36a0ba;
+  p {
+    margin-top: 0.5%;
+    margin-left: 1%;
+  }
+  a:link {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+  a:hover {
+    color: #36a0ba;
+  }
+  a:active {
+    color: #36a0ba;
+  }
 }
 
 .sidebar {
@@ -42,7 +37,6 @@
   align-items: center;
 }
 
-/*class voor de filters*/
 .filters {
   width: 90%;
   margin-top: 5%;
@@ -51,11 +45,10 @@
   border-radius: 7%;
   max-height: 190px;
   overflow: auto;
-}
-
-.filters p {
-  margin: 1%;
-  padding: 1%;
+  p {
+    margin: 1%;
+    padding: 1%;
+  }
 }
 
 /*customizes de input*/
@@ -121,12 +114,11 @@ input[type="range"] {
   height: 40px;
   display: flex;
   align-items: center;
-}
-
-#title p {
-  font-size: 24px;
-  font-weight: bold;
-  margin-left: 1%;
+  p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 1%;
+  }
 }
 
 #productsort {
@@ -231,10 +223,11 @@ select {
 }
 
 /*voor de gekleurde bolletjes*/
-.productkleuren {
+.productkleur {
   display: flex;
   margin: 1%;
-  grid-column: 1;
+  grid-column: 1/ span 2;
+  justify-content: end;
 }
 
 .productmaat {
@@ -247,14 +240,14 @@ select {
   justify-self: end;
   grid-column: 2;
   align-items: end;
+  button {
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    align-self: end;
+  }
 }
 
-.bestelknop button {
-  background-color: white;
-  border: none;
-  font-weight: bold;
-  align-self: end;
-}
 
 @media screen and (max-width: 800px) {
   .mainpage {

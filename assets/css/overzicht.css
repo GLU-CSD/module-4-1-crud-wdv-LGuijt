@@ -11,24 +11,19 @@
   border-right: 2px solid #076178;
   grid-column: 1/span 5;
 }
-
 .mainpagelinks p {
   margin-top: 0.5%;
   margin-left: 1%;
 }
-
 .mainpagelinks a:link {
   color: black;
 }
-
 .mainpagelinks a:visited {
   color: black;
 }
-
 .mainpagelinks a:hover {
   color: #36a0ba;
 }
-
 .mainpagelinks a:active {
   color: #36a0ba;
 }
@@ -42,7 +37,6 @@
   align-items: center;
 }
 
-/*class voor de filters*/
 .filters {
   width: 90%;
   margin-top: 5%;
@@ -52,7 +46,6 @@
   max-height: 190px;
   overflow: auto;
 }
-
 .filters p {
   margin: 1%;
   padding: 1%;
@@ -121,7 +114,6 @@ input[type=range] {
   display: flex;
   align-items: center;
 }
-
 #title p {
   font-size: 24px;
   font-weight: bold;
@@ -229,10 +221,11 @@ select {
 }
 
 /*voor de gekleurde bolletjes*/
-.productkleuren {
+.productkleur {
   display: flex;
   margin: 1%;
-  grid-column: 1;
+  grid-column: 1/span 2;
+  justify-content: end;
 }
 
 .productmaat {
@@ -246,7 +239,6 @@ select {
   grid-column: 2;
   align-items: end;
 }
-
 .bestelknop button {
   background-color: white;
   border: none;

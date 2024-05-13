@@ -133,10 +133,9 @@
 .extraimg{
     display: flex;
     justify-content: center;
-}
-
-.extraimg img{
-    max-height: 100px;
+    img{
+        max-height: 100px;
+    }
 }
 
 .extratitle, .extraprice{

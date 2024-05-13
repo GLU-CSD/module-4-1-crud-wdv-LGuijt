@@ -18,6 +18,8 @@ $paginatitel = 'Home';
     <link rel="stylesheet" href="../assets/css/homepage.css">
     <link rel="stylesheet" href="../assets/css/overzicht.css">
     <link rel="stylesheet" href="../assets/css/detailpage.css">
+    <link rel="stylesheet" href="../assets/css/kleuren.css">
+
 
     <link rel="icon" href="assets/img/iconen/fandf.png" sizes="any">
     <link rel="icon" href="assets/img/iconen/fandf.png" type="image/svg+xml">
@@ -29,7 +31,7 @@ $paginatitel = 'Home';
         <div id="navbalk">
             <div id="logo" onclick="document.location='./homepage.php'"><img id="logoimg" src="assets/img/iconen/fandf.png" alt="logo"></div>
             <div id="navlinks">
-                <a class="links" href="./overzicht.php" target="_self">Schilderijen</a>
+                <a class="links" href="./overzicht.php?cat=1" target="_self">Schilderijen</a>
                 <a class="links" href="" target="_self">Tekeningen</a>
                 <a class="links" href="" target="_self">Kaarten</a>
                 <a class="links" href="" target="_self">Dozen</a>
