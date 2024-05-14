@@ -1,7 +1,8 @@
 <?php
-    include('../core/header.php');
+    include($_SERVER['DOCUMENT_ROOT'] . '/admin/admin_core/header.php');
 ?>
 
+
 <?php
-    include('./core/footer.php');
+    include('./admin_core/footer.php');
 ?>

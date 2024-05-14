@@ -6,9 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     } else {
         $cat = 1;
     }
-    switch ($cat) {
-
-    }
     ?>
     <div class="mainpage"> <!--pagina zonder de navigatie balk en de footer -->
         <div class="mainpagelinks"><!--links boven de producten-->
