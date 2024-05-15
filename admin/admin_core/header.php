@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/admin/assets/css/a_style.css">
     <link rel="stylesheet" href="/admin/assets/css/a_header.css">
+    <link rel="stylesheet" href="/admin/assets/css/a_overzichtpr.css">
 
     
     <title>Admin Panel - Webshop</title>

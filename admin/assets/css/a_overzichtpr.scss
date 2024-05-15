@@ -1,0 +1,50 @@
+@import "../../../assets/css/var.scss";
+
+#adminpr {
+  display: grid;
+
+  #title {
+    font-size: 50px;
+    text-align: center;
+  }
+  #link {
+    margin-left: 4%;
+    a:link {
+      color: black;
+    }
+    a:visited {
+      color: black;
+    }
+    a:hover {
+      color: #36a0ba;
+    }
+    a:active {
+      color: #36a0ba;
+    }
+  }
+}
+
+table,
+td {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  margin: 3%;
+  margin-top: 2px;
+  border-collapse: collapse;
+}
+
+th {
+  height: 80px;
+  min-width: 80px;
+  background-color: $donkergrijs;
+  color: white;
+}
+
+table,
+th,
+td {
+  text-align: center;
+}
+
+tr:hover {
+  background-color: $lichtblauw;
+}

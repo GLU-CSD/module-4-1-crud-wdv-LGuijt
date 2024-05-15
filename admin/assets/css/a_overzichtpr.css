@@ -1,0 +1,47 @@
+#adminpr {
+  display: grid;
+}
+#adminpr #title {
+  font-size: 50px;
+  text-align: center;
+}
+#adminpr #link {
+  margin-left: 4%;
+}
+#adminpr #link a:link {
+  color: black;
+}
+#adminpr #link a:visited {
+  color: black;
+}
+#adminpr #link a:hover {
+  color: #36a0ba;
+}
+#adminpr #link a:active {
+  color: #36a0ba;
+}
+
+table,
+td {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  margin: 3%;
+  margin-top: 2px;
+  border-collapse: collapse;
+}
+
+th {
+  height: 80px;
+  min-width: 80px;
+  background-color: #4f5052;
+  color: white;
+}
+
+table,
+th,
+td {
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #36a0ba;
+}/*# sourceMappingURL=a_overzichtpr.css.map */

@@ -6,6 +6,10 @@
     display: grid;
     justify-items: center;
     grid-template-rows: 200px auto;
+    position: sticky;
+    top: 0.1px;
+    left: 0.1px;
+    box-shadow: 1px 1px 4px black;
 }
 
 #logo{
@@ -21,7 +25,7 @@
 
 .navlinks{
     color: white;
-    font-size: 40px;
+    font-size: 200%;
     height: 50px;
     width: 90%;
     padding: 3%;
