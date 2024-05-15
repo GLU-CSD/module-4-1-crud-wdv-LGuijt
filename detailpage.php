@@ -4,7 +4,7 @@ include 'core/header.php';
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $sku = $_GET["sku"];
-    $sqli_prepare = $con->prepare("SELECT naam, p.productcode, categorie, sub_cat_naam, prijs, maat_naam, maker_bijnaam, gemaakt_op, GROUP_CONCAT(img_src) AS img_src, (SELECT GROUP_CONCAT(kleuren_lijst.kleur_naam) FROM product_kleur AS k JOIN kleuren_lijst on k.kleur_id = kleuren_lijst.id WHERE k.product_id = p.id) AS kleur_naam FROM product_info AS p JOIN product_imgs AS i ON p.productcode = i.productcode JOIN maat_lijst ON p.id = maat_lijst.id JOIN sub_categorie_lijst ON p.id = sub_categorie_lijst.id JOIN maker_lijst ON p.id = maker_lijst.id WHERE p.productcode = ?");
+    $sqli_prepare = $con->prepare("SELECT naam, p.productcode, categorie, sub_cat_naam, prijs, maat_naam, maker_bijnaam, gemaakt_op, GROUP_CONCAT(img_src) AS img_src, (SELECT GROUP_CONCAT(kleuren_lijst.kleur_naam) FROM product_kleur AS k JOIN kleuren_lijst on k.kleur_id = kleuren_lijst.id WHERE k.product_id = p.productcode) AS kleur_naam FROM product_info AS p JOIN product_imgs AS i ON p.productcode = i.productcode JOIN maat_lijst ON p.id = maat_lijst.id JOIN sub_categorie_lijst ON p.id = sub_categorie_lijst.id JOIN maker_lijst ON p.id = maker_lijst.id WHERE p.productcode = ?");
     $sqli_prepare->bind_param("s", $sku);
     if ($sqli_prepare === false) {
         echo mysqli_error($con);
