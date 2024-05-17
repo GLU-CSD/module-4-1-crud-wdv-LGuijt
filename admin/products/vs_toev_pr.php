@@ -20,12 +20,12 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
 
     <div id="adminpr">
         <div id="title">Product toevoegen</div>
-        <form action="toev_pr.php" method="post">
-            <div>
+        <form action="toev_pr.php" method="post" enctype="multipart/form-data">
+            <div class="reg">
                 <label for="naam">Naam:</label>
                 <input type="text" id="naam" name="naam">
             </div>
-            <div>
+            <div class="reg">
                 <label for="categorie">Categorie:</label>
                 <select name="categorie" id="categorie">
                     <?php
@@ -38,7 +38,7 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
                     ?>
                 </select>
             </div>
-            <div>
+            <div class="reg">
                 <label for="sub_categorie">Subcategorie:</label>
                 <select name="sub_categorie" id="sub_categorie">
                     <?php
@@ -51,12 +51,12 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
                     ?>
                 </select>
             </div>
-            <div>
+            <div class="prijs">
                 <label for="prijs">Prijs:</label>
                 <input type="number" id="prijs" name="prijs">,<input type="number" id="prijscent" name="prijscent" min="0" max="99">
 
             </div>
-            <div>
+            <div class="reg">
                 <label for="maat">Maat:</label>
                 <select name="maat" id="maat">
                     <?php
@@ -69,7 +69,7 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
                     ?>
                 </select>
             </div>
-            <div>
+            <div class="reg">
                 <label for="maker">Maker:</label>
                 <select name="maker" id="maker">
                     <?php
@@ -82,11 +82,11 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
                     ?>
                 </select>
             </div>
-            <div>
+            <div class="reg">
                 <label for="gemaaktop">Gemaakt op:</label>
                 <input type="date" id="gemaaktop" name="gemaaktop">
             </div>
-            <div>
+            <div class="klr">
                 <p>Gebruikte kleuren:</p>
                 <?php
                 if ($kleurqry->execute()) {
@@ -98,19 +98,19 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
                 $kleurqry->close();
                 ?>
             </div>
-            <div>
+            <div class="reg">
                 <label for="img">Image:</label>
-                <input type="text" id="img" name="img">
+                <input type="file" id="img" name="img">
             </div>
-            <div>
+            <div class="reg">
                 <label for="extraimg">Extra image:</label>
-                <input type="text" id="extraimg" name="extraimg">
+                <input type="file" id="extraimg" name="extraimg">
             </div>
-            <div>
+            <div class="reg">
                 <label for="extraimgtwo">Extra image:</label>
-                <input type="text" id="extraimgtwo" name="extraimgtwo">
+                <input type="file" id="extraimgtwo" name="extraimgtwo">
             </div>
-            <input type="submit" value="Toevoegen">
+            <input class="reg" type="submit" value="Toevoegen">
         </form>
     </div>
     <?php

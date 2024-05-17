@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/admin/assets/css/a_style.css">
     <link rel="stylesheet" href="/admin/assets/css/a_header.css">
     <link rel="stylesheet" href="/admin/assets/css/a_overzichtpr.css">
+    <link rel="stylesheet" href="/admin/assets/css/form.css">
 
     
     <title>Admin Panel - Webshop</title>

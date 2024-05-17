@@ -1,0 +1,33 @@
+#adminpr {
+  grid-template-rows: 100px auto;
+  justify-items: center;
+}
+
+form {
+  background-color: #36a0ba;
+  width: 80%;
+  display: grid;
+  box-shadow: 2px 2px 10px black;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+form div {
+  display: grid;
+  padding: 1%;
+  min-height: 30px;
+}
+form .reg {
+  grid-template-columns: 50% auto;
+}
+form .prijs {
+  grid-template-columns: 50% 24% 2% auto;
+}
+form .klr {
+  grid-template-columns: 5% 30% 5% 30% 5% 30%;
+}
+form .klr p {
+  grid-column: 1/span 6;
+}
+form .klr input[type=checkbox] {
+  accent-color: #076178;
+}/*# sourceMappingURL=form.css.map */

@@ -16,6 +16,7 @@ if ($con->connect_errno) {
 
 define("BASEURL", "http://localhost/webdev-base/");
 define("BASEURL_CMS", "http://localhost/webdev-base/admin/");
+define("ABSOLUTE_HREF", "C:/GLUCSD/finalversions/module-4-1-crud-wdv-LGuijt/assets/img/");
 
 function prettyDump($var)
 {
