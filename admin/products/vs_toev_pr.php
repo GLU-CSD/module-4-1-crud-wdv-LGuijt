@@ -53,7 +53,7 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
             </div>
             <div class="prijs">
                 <label for="prijs">Prijs:</label>
-                <input type="number" id="prijs" name="prijs">,<input type="number" id="prijscent" name="prijscent" min="0" max="99">
+                <input type="number" id="prijs" name="prijs" value="0">,<input type="number" id="prijscent" name="prijscent" min="0" max="99" value="0">
 
             </div>
             <div class="reg">

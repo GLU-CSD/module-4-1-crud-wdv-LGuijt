@@ -3,7 +3,7 @@
   justify-items: center;
 }
 
-form {
+form, .notrealform {
   background-color: #36a0ba;
   width: 80%;
   display: grid;
@@ -11,16 +11,16 @@ form {
   margin-bottom: 10px;
   border-radius: 5px;
 }
-form div {
+form div, .notrealform div {
   display: grid;
   padding: 1%;
   min-height: 30px;
   grid-column: 1/span 2;
 }
-form .reg {
+form .reg, .notrealform .reg {
   grid-template-columns: 50% auto;
 }
-form #submit {
+form #submit, .notrealform #submit {
   background-color: white;
   height: 50px;
   grid-column: 2;
@@ -31,20 +31,20 @@ form #submit {
   font-size: 20px;
   transition-duration: 0.2s;
 }
-form #submit:hover {
+form #submit:hover, .notrealform #submit:hover {
   background-color: #076178;
   color: white;
 }
-form .prijs {
+form .prijs, .notrealform .prijs {
   grid-template-columns: 50% 24% 2% auto;
 }
-form .klr {
+form .klr, .notrealform .klr {
   grid-template-columns: 5% 30% 5% 30% 5% 30%;
 }
-form .klr p {
+form .klr p, .notrealform .klr p {
   grid-column: 1/span 6;
 }
-form .klr input[type=checkbox] {
+form .klr input[type=checkbox], .notrealform .klr input[type=checkbox] {
   accent-color: #076178;
 }
 

@@ -24,32 +24,32 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         <div><?=$naam?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=categorie">Bewerken</a></div>
+                        <div><a href="vs_update_twee.php?sku=<?=$sku?>&cat=categorie">Bewerken</a></div>
                         <div>Categorie</div>
                         <div><?=$categorie?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=sub_categorie">Bewerken</a></div>
+                        <div><a href="vs_update_twee.php?sku=<?=$sku?>&cat=sub_categorie">Bewerken</a></div>
                         <div>Sub-Categorie</div>
                         <div><?=$sub_categorie?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=prijs">Bewerken</a></div>
+                        <div><a href="vs_update_twee.php?sku=<?=$sku?>&cat=prijs">Bewerken</a></div>
                         <div>Prijs</div>
                         <div><?=$prijs?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=maat">Bewerken</a></div>
+                        <div><a href="vs_update_twee.php?sku=<?=$sku?>&cat=maat">Bewerken</a></div>
                         <div>Maat</div>
                         <div><?=$maat?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=gemaakt_op">Bewerken</a></div>
+                        <div><a href="vs_update_twee.php?sku=<?=$sku?>&cat=gemaakt_op">Bewerken</a></div>
                         <div>Gemaakt op</div>
                         <div><?=$gemaakt_op?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=actief">Bewerken</a></div>
+                        <div><a href="vs_update_drie.php?sku=<?=$sku?>&cat=actief&actief=<?=$actief?>">Bewerken</a></div>
                         <div>Actief</div>
                         <div><?php
                         if($actief === 1){
@@ -60,12 +60,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         ?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=opmerkingen">Bewerken</a></div>
+                        <div><a href="vs_update_twee.php?sku=<?=$sku?>&cat=opmerkingen">Bewerken</a></div>
                         <div>Opmerkingen</div>
                         <div><?=$opmerkingen?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=prodimg">Bewerken</a></div>
+                        <div><a href="vs_update_drie.php?sku=<?=$sku?>&cat=prodimg&extra=none">Bewerken</a></div>
                         <div>Afbeeldingen</div>
                         <div><?php
                         foreach($img_src_array as $img) {
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         ?></div>
                     </div>
                     <div class="bewerk">
-                        <div><a href="vs_update_twee?sku=<?=$sku?>&cat=kleuren">Bewerken</a></div>
+                        <div><a href="vs_update_drie.php?sku=<?=$sku?>&cat=kleuren&extra=none">Bewerken</a></div>
                         <div>Kleuren</div>
                         <div><?php
                         foreach($kleur_id_array as $kleur) {
