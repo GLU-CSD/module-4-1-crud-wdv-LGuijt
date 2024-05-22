@@ -6,19 +6,21 @@
   text-align: center;
 }
 #adminpr #link {
-  margin-left: 4%;
+  margin-left: 2%;
+  margin-right: 2px;
+  justify-self: flex-start;
 }
-#adminpr #link a:link {
+#adminpr a:link {
   color: black;
 }
-#adminpr #link a:visited {
+#adminpr a:visited {
   color: black;
 }
-#adminpr #link a:hover {
-  color: #36a0ba;
+#adminpr a:hover {
+  color: #076178;
 }
-#adminpr #link a:active {
-  color: #36a0ba;
+#adminpr a:active {
+  color: #076178;
 }
 
 table,

@@ -51,6 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($i_insertqry->execute()) {
         $categorieqry->execute();
+        ?>
+        <div><p>Product toegevoegd.</p>
+        <p><a href="./index.php" id="link">Terug naar overzicht</a></p>
+        </div>
+        <?php
     }
 
     if (isset($_FILES['img'])) {
@@ -189,3 +194,5 @@ function skubuilder($cat, $count)
     $basesku += $count;
     return $basesku;
 }
+include ('../admin_core/footer.php');
+?>

@@ -31,7 +31,7 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
                     <?php
                     if ($catqry->execute()) {
                         while ($catqry->fetch()) { ?>
-                            <option value="<?= $cat_id ?>"><?= $cat_naam ?></option>
+                            <option class="option" value="<?= $cat_id ?>"><?= $cat_naam ?></option>
                         <?php }
                     }
                     $catqry->close();
@@ -99,18 +99,18 @@ if ($catqry === false || $subcatqry === false || $maatqry === false || $makerqry
                 ?>
             </div>
             <div class="reg">
-                <label for="img">Image:</label>
+                <label for="img">Afbeelding:</label>
                 <input type="file" id="img" name="img">
             </div>
             <div class="reg">
-                <label for="extraimg">Extra image:</label>
+                <label for="extraimg">Extra afbeelding:</label>
                 <input type="file" id="extraimg" name="extraimg">
             </div>
             <div class="reg">
-                <label for="extraimgtwo">Extra image:</label>
+                <label for="extraimgtwo">Extra afbeelding:</label>
                 <input type="file" id="extraimgtwo" name="extraimgtwo">
             </div>
-            <input class="reg" type="submit" value="Toevoegen">
+            <input class="reg" id="submit" type="submit" value="Toevoegen">
         </form>
     </div>
     <?php

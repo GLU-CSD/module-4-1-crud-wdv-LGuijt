@@ -8,19 +8,21 @@
     text-align: center;
   }
   #link {
-    margin-left: 4%;
-    a:link {
-      color: black;
-    }
-    a:visited {
-      color: black;
-    }
-    a:hover {
-      color: #36a0ba;
-    }
-    a:active {
-      color: #36a0ba;
-    }
+    margin-left: 2%;
+    margin-right: 2px;
+    justify-self: flex-start;
+  }
+  a:link {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+  a:hover {
+    color: $donkerblauw;
+  }
+  a:active {
+    color: $donkerblauw;
   }
 }
 

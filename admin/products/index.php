@@ -39,7 +39,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/admin/admin_core/header.php');
                     ?>
                     <tr>
                         <td>
-                            <a>toekomstige bewerklink</a>
+                            <a id="link" href="vs_update_pr.php?sku=<?=$productcode?>">Bijwerken</a>
                         </td>
                         <td><?= $id; ?></td>
                         <td><?= $naam; ?></td>
