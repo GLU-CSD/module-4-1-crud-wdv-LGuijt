@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 22 mei 2024 om 14:40
+-- Gegenereerd op: 24 mei 2024 om 11:47
 -- Serverversie: 10.4.28-MariaDB
 -- PHP-versie: 8.2.4
 
@@ -24,6 +24,30 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Tabelstructuur voor tabel `blog`
+--
+
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL,
+  `gebruiker` varchar(255) NOT NULL,
+  `titel` varchar(255) NOT NULL,
+  `tekst` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `blog`
+--
+
+INSERT INTO `blog` (`id`, `gebruiker`, `titel`, `tekst`) VALUES
+(1, 'Lisa', 'test', 'dit is een test'),
+(2, 'Lisa', 'nog een test', 'dit is nog een test'),
+(3, 'Lisa', 'test 3', 'test #3'),
+(4, 'Lisa', 'test 4', 'test #4'),
+(5, 'BERT', 'test 5', 'test #5');
+
+-- --------------------------------------------------------
+
+--
 -- Tabelstructuur voor tabel `categorie_lijst`
 --
 
@@ -38,7 +62,7 @@ CREATE TABLE `categorie_lijst` (
 --
 
 INSERT INTO `categorie_lijst` (`id`, `cat_naam`, `cat_count`) VALUES
-(1, 'Schilderijen', 19),
+(1, 'Schilderijen', 21),
 (2, 'Tekeningen', 0),
 (3, 'Dozen', 0),
 (4, 'Accesoires', 0),
@@ -192,7 +216,13 @@ INSERT INTO `product_imgs` (`id`, `productcode`, `img_src`, `main_img`) VALUES
 (69, 1614202413, 'schilderij_elf3.png', 0),
 (70, 1614202419, '', 1),
 (71, 1614202419, '', 0),
-(72, 1614202419, '', 0);
+(72, 1614202419, '', 0),
+(73, 1614202420, 'accesoires_twee3.png', 1),
+(74, 1614202420, 'accesoires_twee3.png', 0),
+(75, 1614202420, '', 0),
+(76, 1614202421, 'accesoires_vier.png', 1),
+(77, 1614202421, 'accesoires_een2.png', 0),
+(78, 1614202421, 'accesoires_een3.png', 0);
 
 -- --------------------------------------------------------
 
@@ -226,7 +256,7 @@ INSERT INTO `product_info` (`id`, `naam`, `productcode`, `categorie`, `sub_categ
 (4, 'Bianca', 161420244, 1, 1, 29.95, 2, 1, '2023-05-16', '2024-04-24 08:53:57', 1, ''),
 (5, 'Chantal', 161420245, 1, 1, 29.95, 2, 1, '2023-08-15', '2024-04-24 08:53:57', 1, ''),
 (6, 'Henk', 161420246, 1, 1, 29.95, 2, 1, '2023-06-29', '2024-04-24 08:53:57', 1, ''),
-(7, 'Dionne', 161420247, 1, 1, 23.95, 1, 1, '2023-03-22', '2024-04-24 08:53:57', 1, ''),
+(7, 'Dionne', 161420247, 1, 1, 23.95, 1, 1, '2023-03-22', '2024-05-24 08:55:33', 1, ''),
 (8, 'Eduard', 161420248, 1, 1, 23.95, 1, 1, '2022-03-31', '2024-04-24 08:53:57', 1, ''),
 (9, 'Bobby', 161420249, 1, 1, 28.95, 2, 1, '2023-04-22', '2024-04-24 08:53:57', 1, ''),
 (10, 'Femke', 1614202410, 1, 1, 22.95, 1, 1, '2022-10-01', '2024-04-24 08:53:57', 1, ''),
@@ -237,8 +267,7 @@ INSERT INTO `product_info` (`id`, `naam`, `productcode`, `categorie`, `sub_categ
 (19, 'Jim', 1614202415, 1, 2, 29.99, 1, 1, '2023-05-24', '2024-05-21 11:43:01', 1, ''),
 (20, 'Kevin', 1614202416, 1, 1, 24.95, 1, 1, '2023-03-31', '2024-05-21 11:47:12', 1, ''),
 (21, 'Lotte', 1614202417, 1, 1, 24.95, 1, 1, '2023-08-12', '2024-05-21 11:52:24', 1, ''),
-(22, 'Max', 1614202418, 1, 1, 29.95, 2, 1, '2023-07-06', '2024-05-21 11:55:39', 1, ''),
-(23, '', 1614202419, 1, 1, 0.00, 1, 1, '0000-00-00', '2024-05-22 12:18:58', 1, 'voor testen');
+(22, 'Max', 1614202418, 1, 1, 29.95, 2, 1, '2023-07-06', '2024-05-21 11:55:39', 1, '');
 
 -- --------------------------------------------------------
 
@@ -307,7 +336,6 @@ INSERT INTO `product_kleur` (`id`, `product_id`, `kleur_id`) VALUES
 (65, 1614202412, 9),
 (66, 1614202412, 11),
 (67, 1614202413, 1),
-(68, 1614202413, 6),
 (69, 1614202413, 7),
 (70, 1614202413, 9),
 (71, 1614202413, 11),
@@ -329,7 +357,23 @@ INSERT INTO `product_kleur` (`id`, `product_id`, `kleur_id`) VALUES
 (87, 1614202417, 11),
 (88, 1614202418, 1),
 (89, 1614202418, 9),
-(90, 1614202418, 11);
+(90, 1614202418, 11),
+(91, 1614202420, 1),
+(92, 1614202420, 2),
+(93, 1614202420, 3),
+(94, 1614202420, 4),
+(95, 1614202420, 5),
+(96, 1614202420, 6),
+(97, 1614202420, 7),
+(98, 1614202420, 8),
+(99, 1614202420, 9),
+(100, 1614202420, 10),
+(101, 1614202420, 11),
+(102, 1614202413, 6),
+(103, 1614202421, 1),
+(104, 1614202421, 8),
+(105, 1614202421, 9),
+(106, 1614202421, 5);
 
 -- --------------------------------------------------------
 
@@ -363,6 +407,12 @@ INSERT INTO `sub_categorie_lijst` (`id`, `sub_cat_naam`) VALUES
 --
 -- Indexen voor geëxporteerde tabellen
 --
+
+--
+-- Indexen voor tabel `blog`
+--
+ALTER TABLE `blog`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexen voor tabel `categorie_lijst`
@@ -423,6 +473,12 @@ ALTER TABLE `sub_categorie_lijst`
 --
 
 --
+-- AUTO_INCREMENT voor een tabel `blog`
+--
+ALTER TABLE `blog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT voor een tabel `categorie_lijst`
 --
 ALTER TABLE `categorie_lijst`
@@ -450,19 +506,19 @@ ALTER TABLE `maker_lijst`
 -- AUTO_INCREMENT voor een tabel `product_imgs`
 --
 ALTER TABLE `product_imgs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT voor een tabel `product_info`
 --
 ALTER TABLE `product_info`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT voor een tabel `product_kleur`
 --
 ALTER TABLE `product_kleur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT voor een tabel `sub_categorie_lijst`

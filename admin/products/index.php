@@ -24,7 +24,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/admin/admin_core/header.php');
         </tr>
         <?php
 
-        $sql = "SELECT p.id, p.naam, p.productcode, c.cat_naam, sc.sub_cat_naam, p.prijs, m.maat_naam, p.gemaakt_op, p.laatst_bewerkt, p.actief, p.opmerkingen, (SElECT GROUP_CONCAT(img_src) FROM product_imgs AS i WHERE i.productcode = p.productcode) AS img_src, (SELECT GROUP_CONCAT(kleuren_lijst.kleur_naam) FROM product_kleur AS k JOIN kleuren_lijst on k.kleur_id = kleuren_lijst.id WHERE k.product_id = p.productcode) AS kleur_id FROM product_info AS p JOIN maat_lijst as m ON p.maat = m.id JOIN categorie_lijst as c ON p.categorie = c.id JOIN sub_categorie_lijst as sc ON p.sub_categorie = sc.id";
+        $sql = "SELECT p.id, p.naam, p.productcode, c.cat_naam, sc.sub_cat_naam, p.prijs, m.maat_naam, p.gemaakt_op, p.laatst_bewerkt, p.actief, p.opmerkingen, (SElECT GROUP_CONCAT(img_src) FROM product_imgs AS i WHERE i.productcode = p.productcode) AS img_src, (SELECT GROUP_CONCAT(kleuren_lijst.kleur_naam) FROM product_kleur AS k JOIN kleuren_lijst on k.kleur_id = kleuren_lijst.id WHERE k.product_id = p.productcode) AS kleur_id FROM product_info AS p JOIN maat_lijst as m ON p.maat = m.id JOIN categorie_lijst as c ON p.categorie = c.id JOIN sub_categorie_lijst as sc ON p.sub_categorie = sc.id ORDER BY p.laatst_bewerkt";
         $liqry = $con->prepare($sql);
         if ($liqry === false) {
             echo mysqli_error($con);

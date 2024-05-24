@@ -18,5 +18,6 @@
 <body>
  <div id="aheader">
     <div id="logo"><img id="logoimg" src="/assets/img/iconen/fandf.png" alt="logo"></div>
-    <a class="navlinks">Overzicht</a>
+    <a class="navlinks" href="../products/index.php">Overzicht</a>
+    <a class="navlinks" href="../blog/index.php">Blog</a>
  </div>
