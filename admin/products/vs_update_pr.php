@@ -1,9 +1,9 @@
 <?php
 include ($_SERVER['DOCUMENT_ROOT'] . '/admin/admin_core/header.php');
 
-$prodqry = $con->prepare("SELECT p.naam, c.cat_naam, sc.sub_cat_naam, p.prijs, m.maat_naam, p.gemaakt_op, p.actief, p.opmerkingen, (SElECT GROUP_CONCAT(img_src) FROM product_imgs AS i WHERE i.productcode = p.productcode) AS img_src, (SELECT GROUP_CONCAT(kleuren_lijst.kleur_naam) FROM product_kleur AS k JOIN kleuren_lijst on k.kleur_id = kleuren_lijst.id WHERE k.product_id = p.productcode) AS kleur_id FROM product_info AS p JOIN maat_lijst as m ON p.maat = m.id JOIN categorie_lijst as c ON p.categorie = c.id JOIN sub_categorie_lijst as sc ON p.sub_categorie = sc.id WHERE p.productcode = ?");
+$prodqry = $con->prepare("SELECT p.id, p.naam, c.cat_naam, sc.sub_cat_naam, p.prijs, m.maat_naam, p.gemaakt_op, p.actief, p.opmerkingen, (SElECT GROUP_CONCAT(img_src) FROM product_imgs AS i WHERE i.productcode = p.productcode) AS img_src, (SELECT GROUP_CONCAT(kleuren_lijst.kleur_naam) FROM product_kleur AS k JOIN kleuren_lijst on k.kleur_id = kleuren_lijst.id WHERE k.product_id = p.productcode) AS kleur_id FROM product_info AS p JOIN maat_lijst as m ON p.maat = m.id JOIN categorie_lijst as c ON p.categorie = c.id JOIN sub_categorie_lijst as sc ON p.sub_categorie = sc.id WHERE p.productcode = ?");
 $prodqry->bind_param("i", $sku);
-$prodqry->bind_result($naam, $categorie, $sub_categorie, $prijs, $maat, $gemaakt_op,  $actief, $opmerkingen, $img_src, $kleur_id);
+$prodqry->bind_result($id, $naam, $categorie, $sub_categorie, $prijs, $maat, $gemaakt_op,  $actief, $opmerkingen, $img_src, $kleur_id);
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $sku = $_GET["sku"];
@@ -82,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         }
                         ?></div>
                     </div>
+                    <a href="vs_delete_pr.php?id=<?=$id?>&sku=<?=$sku?>&naam=<?=$naam?>">x Product verwijderen</a>
                     <?php
                 }
             }
