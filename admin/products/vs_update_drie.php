@@ -12,8 +12,9 @@ $imgqry->bind_result($i_id, $i_naam);
 $klreenqry = $con->prepare("SELECT id, kleur_naam FROM kleuren_lijst");
 $klreenqry->bind_result($k_id, $k_naam);
 
-$klrtweeqry = $con->prepare("SELECT p.id, p.kleur_id, l.kleur_naam FROM product_kleur AS p JOIN kleuren_lijst as l ON p.kleur_id = l.id WHERE productcode = ?");
-
+$klrtweeqry = $con->prepare("SELECT p.id, l.kleur_naam FROM product_kleur AS p JOIN kleuren_lijst as l ON p.kleur_id = l.id WHERE p.product_id = ?");
+$klrtweeqry->bind_param("i", $sku);
+$klrtweeqry->bind_result($klr_id, $klr_naam);
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $type = $_GET["cat"];
@@ -117,8 +118,17 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <div id="title">Product wijzigen - <?= $naam ?></div>
                     <form action="edit_pr_two.php" method="post" enctype="multipart/form-data">
                         <div class="reg">
-                            <label for="img">Nieuwe afbeelding:</label>
-                            <input type="file" id="img" name="img">
+                            <label for="addklr">Kleur toevoegen:</label>
+                            <select name="addklr" id="addklr">
+                            <?php
+                            if ($klreenqry->execute()) {
+                                while ($klreenqry->fetch()) { ?>
+                                    <option class="option" value="<?= $k_id ?>"><?= $k_naam ?></option>
+                            <?php
+                                }
+                            }
+                            $klreenqry->close(); ?>
+                            </select>
                         </div>
                         <input type="hidden" id="act" name="act" value="kadd">
                         <input type="hidden" id="sku" name="sku" value="<?= $sku ?>">
@@ -126,6 +136,29 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     </form>
                 </div>
                 <?php
+            } else if ($_GET["extra"] === "verw") { ?>
+                <div id="adminpr" class="update">
+                    <div id="title">Product wijzigen - <?= $naam ?></div>
+                    <form action="edit_pr_two.php" method="post" enctype="multipart/form-data">
+                        <div class="reg">
+                            <label for="remklr">kleur te verwijderen:</label>
+                            <select name="remklr" id="remklr">
+                            <?php
+                                if ($klrtweeqry->execute()) {
+                                    while ($klrtweeqry->fetch()) { ?>
+                                        <option class="option" value="<?= $klr_id ?>"><?= $klr_naam ?></option>
+                                <?php
+                                    }
+                                }
+                                $klrtweeqry->close(); ?>
+                            </select>
+                        </div>
+                        <input type="hidden" id="act" name="act" value="krem">
+                        <input type="hidden" id="sku" name="sku" value="<?= $sku ?>">
+                        <input class="reg" id="submit" type="submit" value="Verwijderen">
+                    </form>
+                </div>
+            <?php
             }
 
         }
