@@ -24,7 +24,15 @@
   a:active {
     color: $donkerblauw;
   }
+  a.deletelink:link {
+    color: white;
+  }
+  a.deletelink:visited {
+    color: white;
+  }
 }
+
+
 
 table,
 td {

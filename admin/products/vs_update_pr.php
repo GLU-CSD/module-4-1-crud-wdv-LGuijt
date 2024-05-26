@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                         }
                         ?></div>
                     </div>
-                    <a href="vs_delete_pr.php?id=<?=$id?>&sku=<?=$sku?>&naam=<?=$naam?>">x Product verwijderen</a>
+                    <a href="vs_delete_pr.php?id=<?=$id?>&sku=<?=$sku?>&naam=<?=$naam?>" class="deletelink">x Product verwijderen</a>
                     <?php
                 }
             }

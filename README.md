@@ -1,24 +1,9 @@
-# Basis webshop voor lessen webshop bouwen
+1. clone de gitrepo (module-4-1-crud-wdv-LGuijt).
 
-## Starten van applicatie
+2. Voor mijn project heb je PHP nodig, een database (staat in database/webshop_fruitfish) en xampp.
 
-In de **database** map staan een __backup.sql__
 
-Zorg dat je je eigen database backup in deze map zet.
 
-Maak een database naam aan en zet in het bestand **core/db_connect.php**
 
-## Mappenstructuur
-
-- ***admin*** 
-    - Is het mapje waar het CMS (Content Management System) of Admin panel komt van de webshop.
-- ***assets*** 
-    - Hierin staan de css, js en images.
-    - Ook staan hier de upload images die geupload worden vanuit het CMS
-- ***core***
-    - In dit mapje staat de database connectie.
-    - De header en de footer van de HTML voorkant.
-    - **admin/core** bevat nog een checklogin function file. 
-- ***functions***
-    - Hier komen de _functions_ van de webshop in te staan. Denk hierbij aan het ophalen van producten of het plaatsen van een bestelling.
-
+cms is te vinden in localhost/admin/products
+blog localhost/admin/blog

@@ -22,6 +22,12 @@
 #adminpr a:active {
   color: #076178;
 }
+#adminpr a.deletelink:link {
+  color: white;
+}
+#adminpr a.deletelink:visited {
+  color: white;
+}
 
 table,
 td {

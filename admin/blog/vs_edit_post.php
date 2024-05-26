@@ -12,14 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
             ?>
             <form method="post" action="edit_post.php">
                 <label for="gebruiker">Gebruiker:</label>
-                <input type="text" id="gebruiker" name="gebruiker" maxlength="255" value="<?=$gebruiker?>">
+                <input type="text" id="gebruiker" name="gebruiker" maxlength="255" value="<?= $gebruiker ?>">
                 <label for="titel">Titel:</label>
-                <input type="text" id="titel" name="titel" maxlength="255" value="<?=$titel?>">
-                <textarea name="tekst" rows="15" cols="1"><?=$tekst?></textarea>
-                <input type="hidden" name="id" value="<?=$id?>">
+                <input type="text" id="titel" name="titel" maxlength="255" value="<?= $titel ?>">
+                <textarea name="tekst" rows="15" cols="1"><?= $tekst ?></textarea>
+                <input type="hidden" name="id" value="<?= $id ?>">
                 <input type="submit" value="Toevoegen">
+                <div><a href="vs_remove_post.php?id=<?=$id?>">verwijderen?</a></div>
             </form>
-            <div><a>verwijderen?</a></div>
             <?php
         }
     }
